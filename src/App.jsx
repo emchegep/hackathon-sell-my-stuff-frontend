@@ -3,6 +3,7 @@ import MarkdownRenderer from './MarkdownRenderer.jsx';
 
 function App() {
   // Configuration - can be overridden by environment variables
+    // Minor code refactoring with inline comment
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
   
   const [apiKey, setApiKey] = useState('');
