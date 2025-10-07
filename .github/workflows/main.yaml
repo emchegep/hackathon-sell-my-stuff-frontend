@@ -10,7 +10,7 @@ env:
 permissions:
   id-token: write
   contents: read
-
+# Main job to test credentials
 jobs:
   oidc-test:
     runs-on: ubuntu-latest
