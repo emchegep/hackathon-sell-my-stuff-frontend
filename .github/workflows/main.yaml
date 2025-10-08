@@ -18,9 +18,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
       - name: configure aws credentials using OIDC
-        uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502
+        uses: aws-actions/configure-aws-credentials@v5.0.0
         with:
           role-to-assume: arn:aws:iam::481665093940:role/github-action-role
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: us-east-2
       - name: Test AWS Credentials
         run: aws sts get-caller-identity
