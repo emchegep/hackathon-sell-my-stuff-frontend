@@ -3,8 +3,6 @@ provider "aws" {
 }
 
 terraform {
-  required_version = ">= 1.0"
-
   backend "s3" {
     bucket       = "devops-skool-tf-states"
     region       = "us-east-2"
