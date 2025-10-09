@@ -7,7 +7,6 @@ on:
 
 env:
   AWS_REGION: "us-east-2"
-  VITE_API_BASE_URL: "https://s81kreu6hc.execute-api.us-east-2.amazonaws.com/prod/{proxy+}"
 
 permissions:
   id-token: write
@@ -66,6 +65,8 @@ jobs:
         run: npm install
 
       - name: Run build
+        env:
+          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
         run: npm run build
 
       - name: Configure AWS Credentials
