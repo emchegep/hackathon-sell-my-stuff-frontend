@@ -209,11 +209,12 @@ function App() {
                 
                 // Call our FastAPI endpoint
                 const response = await fetch(`${API_BASE_URL}/listings/analyze`, {
-                  method: 'POST',
-                  headers,
-                  body: JSON.stringify({
-                    image: fileData
-                  }),
+                    method: 'POST',
+                    mode: 'cors',
+                    headers,
+                    body: JSON.stringify({
+                        image: fileData
+                    }),
                 });
                 
                 if (!response.ok) {
